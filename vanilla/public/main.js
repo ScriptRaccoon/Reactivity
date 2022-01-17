@@ -14,12 +14,12 @@ function handleSubmit(e) {
     li.append(text + " ");
     const button = document.createElement("button");
     button.innerText = "Delete";
-    button.addEventListener("click", () => handleDelete(li));
+    button.addEventListener("click", () => handleDelete(li, text));
     li.append(button);
     ul.appendChild(li);
 }
 
-function handleDelete(li) {
+function handleDelete(li, text) {
     li.remove();
     list = list.filter((x) => x != text);
 }
